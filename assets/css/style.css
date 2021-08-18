@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 3px black, 0 0 5px black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-image: url('../images/spacecathey.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+h1{
+  font-size: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: transparent;
+  display: flex;
+}
+
+nav a {
+  color: #f2f2f2;
+  padding: 14px 16px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  text-shadow: 0 0 3px black, 0 0 5px black;
+}
+
+nav a:hover {
+  background-color: rgb(243, 201, 17);
+  color: black;
+  opacity: .5;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  background-color:#f27093;
+  background-image: linear-gradient(to bottom, #f391ab 0%, #c20c8b 100% );
+  background-blend-mode: normal;
+}
+
+aside {
+  flex: 30%;
+  background-color: transparent;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+section {
+  padding: 20px;
+  width:100%;
+  text-align: left;
+  flex: 70%;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+section {
+  flex: 70%;
+  background-color: transparent;
+  padding: 20px;
+}
+
+h3 {
+  width: 40%;
+  padding: 20px;
+  background: #13293d;
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  text-shadow: 0 0 3px #ee4ac5, 0 0 5px #ee4ac5;
+  border: solid;
+  border-color: black;
+  border-width: 5px;
+  border-style:groove;
+  margin-left: 1rem;
+}
+
+.infoSet {
+  background-color: white;
+  width: auto;
+  height: auto;
+  word-wrap: break-word;
+  margin-left: 5rem;
+  margin-bottom: 0;
+  position: relative;
+  border-bottom-right-radius: 5rem;
+  border-top-right-radius: 5rem;
+  border-bottom-left-radius:3rem;
+  border-color: black;
+  border-width: 5px;
+  border-style:groove;
+
+}
+
+.infoSet p {
+  padding: 1rem;
+  margin: 0;
+}
+
+h4 {
+  padding: 10px;
+  background: #13293d;
+  color: #fff;
+  width: 70%;
+  text-align: center;
+  text-shadow: 0 0 1.5px #ee4ac5, 0 0 1.5px #ee4ac5;
+  border: solid;
+  border-color: black;
+  border-width: 3px;
+  border-style:groove;
+}
+
+.infoSetPlus {
+  background-color: white;
+  width: auto;
+  height: auto;
+  word-wrap: break-word;
+  margin-left: 3rem;
+  margin-top: 0;
+  position: relative;
+  border-bottom-right-radius: 3rem;
+  border-top-right-radius: 3rem;
+  border-bottom-left-radius:3rem;
+  border-color: black;
+  border-width: 5px;
+  border-style:groove;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 15px;
+}
+
+.work {
+  margin: 0;
+  margin-left: 1rem;
+  padding: 0;
+  display: flex;
+}
+
+.container img{
+  max-width: 10rem;
+  height: auto;
+  margin-left: 5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.container img:hover {
+  transform: scale(1.5);
+  opacity: .5;
+}
+
+.container {
+  position: relative;
+  width: 75%;
+  max-width: 500px;
+  flex-direction: 30%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.containerPlus {
+  position: relative;
+  width: 50%;
+  max-width: 200px;
+  flex-direction: 30%;
+}
+
+.overlayPlus {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  width: 70%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 15px;
+  padding: 20px;
+  text-align: center;
+}
+
+.containerPlus img{
+  max-width: 8rem;
+  height: auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.containerPlus img:hover {
+  transform: scale(1.5);
+  opacity: .5;
+}
+
+.containerPlus:hover .overlayPlus {
+  opacity: 1;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
+#resume {
+  margin-left: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  main,
+  nav {
+    flex-direction: column;
+  }
+  aside {
+    order: 2;
+  }
+  .container {
+    width: 100%;
+  }
+  .container img {
+    margin-left: 0;
+  }
+  .containerPlus {
+    width: 100%;
+  }
+  .work {
+    flex-direction: column;
+  }
+}
+
